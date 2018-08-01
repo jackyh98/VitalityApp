@@ -33,10 +33,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func confirmBtn(_ sender: Any) {
         
         // users are only allowed to enter letters and numbers, alerts users if they entered a invalid username
-        if ( userInput.text?.rangeOfCharacter(from: characterSet.inverted) == nil && userInput.text != "" ) {
+        if ( userInput.text?.rangeOfCharacter(from: characterSet.inverted) == nil && userInput.text != "" && (userInput.text?.count)! < 25) {
             UserDefaults.standard.set(userInput.text, forKey: "username")
             dismiss(animated: true, completion: nil)
         }
+        
+        if ((userInput.text?.count)! >= 25) {
+            createAlert(title: "Invalid Username", message: "Number characters must be less than 25")
+        }
+            
         else {
             createAlert(title: "Invalid Username", message: "Please only enter letters and numbers")
         }
