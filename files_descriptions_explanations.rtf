@@ -1,0 +1,81 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red65\green182\blue69;\red30\green32\blue40;}
+{\*\expandedcolortbl;;\csgenericrgb\c25500\c71400\c27000;\csgenericrgb\c11800\c12500\c15700;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh15600\viewkind0
+\deftab543
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 //  VitalityApp
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf2 //
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf2 //  CMPT276
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf2 //Project Group 16
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf2 //Team Vitality
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf2 // Members: Eric Joseph Lee, Phillip Choi, Jacky Huynh, Jordan Cheung
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf2 //
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf2 //\
+files: AppDelegate.swift, ViewController.swift, LoginViewController.swift, CuisineViewController.swift, CuisinePopOverViewController.swift, SelectionViewController.swift, VegPopOverViewController.swift, MeatPopOverViewController.swift, GrainPopOverViewController.swift, DairyPopOverViewController.swift, ingredientViewController.swift,OutputViewController.swift, RecipeViewController.swift, HistoryViewController.swift,HistoryRecipeViewController.swift, ChartViewController.swift\
+\
+AppDelegate.swift: A set of methods that are called by UIApplication in response to important events\
+\
+ViewController.swift: view controller for the initial window of the app, loads all saved recipes from database, contains log in as well\
+\
+CuisineViewController.swift: View controller that has a button that takes users to cuisine selection, and a next button to go to next view controller after cuisine is selected\
+\
+CuisinePopOverViewController.swift: View controller that is a table of cuisines that users can select\
+\
+VegPopOverViewController.swift: View controller that is a table that lists all the vegetable ingredients for users to pick. Contains functions to display all the ingredients, and functions that detect when certain ingredients are chosen, and adds them to arrays that are in the shared file\
+\
+MeatPopOverViewController.swift : View controller that is a table that lists all the meat ingredients for users to pick. Contains functions to display all the ingredients, and functions that detect when certain ingredients are chosen, and adds them to arrays that are in the shared file\
+ \
+GrainPopOverViewController.swift : View controller that is a table that lists all the grain ingredients for users to pick. Contains functions to display all the ingredients, and functions that detect when certain ingredients are chosen, and adds them to arrays that are in the shared file\
+\
+DairyPopOverViewController.swift : View controller that is a table that lists all the dairy ingredients for users to pick. Contains functions to display all the ingredients, and functions that detect when certain ingredients are chosen, and adds them to arrays that are in the shared file\
+\
+IngredientViewController.swift: View controller that displays all the ingredients that users have selected, with a button to go to the next view controller\
+\
+OutputViewController.swift: After ingredient selection is finished the file goes to the shared file and grabs all the ingredients, and cuisine selected. Then goes to the right json file and compares to every single recipe, and ordered them from most matched to least matched. After displaying the recipes on the screen for users to select. After user selection recipe name, ingredients, and url and then sent to the next view controller\
+\
+RecipeVewController.swift: view controller that displays the name of the final recipe that users have picked along with the ingredients required. URL link is assigned to the button so users can see the recipe online, in safari. As well as displays instructions and tips for the recipe. If users decided to save the recipe then recipe gets uploaded to database\
+\
+HistoryViewController.swift: View controller that displays all saved recipes of a user when they are logged in\
+\
+HistoryRecipeViewController.swift: View controller that displays the recipe, ingredients, and instructions of the chosen recipe. Users are also able to upload images of their meal. Code searches through database and loads image if there is an image uploaded for a recipe. \
+\
+ChartViewController.swift: View controller that displays a pie chart of all users saved recipes. The data displayed is a ratio of the food groups (vegetables, grain, and meat and alternative)\
+\
+Recipe.swift\
+// This class has the same format as recipes from the JSON file. When the JSON file is read by the reading function, It reads the name , url, the array of the ingredients, instructions, tips, serving size, and weight of the food groups of the recipes from the JSON file and allows these datas to get parsed\
+\
+Ingredient.swift\
+// This class allows to read the ingredients array in JSON file. It has the same format as the JSON ingredient array. It allows these datas to get parsed and handled when JSON file is read from the JSON reading function.\
+\
+Shared.swift: A shared file that contains variables that all view controllers can access\
+ \
+Chinese.json  on the \
+// Data structure in JSON format. It contains the name of the recipe, ingredients, and the url address of the recipes on the internet\
+\
+Thai.josn\
+// Data structure in JSON format. It contains the name of the recipe, ingredients, and the url address of the recipes on the internet\
+\
+Korean.json\
+// Data structure in JSON format. It contains the name of the recipe, ingredients, and the url address of the recipes on the internet\
+\
+Japanese.json\
+// Data structure in JSON format. It contains the name of the recipe, ingredients, and the url address of the recipes on the internet\
+\
+}
